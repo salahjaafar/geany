@@ -1,0 +1,95 @@
+# format=pipe
+# PHP 8.2 - Fonctions les plus utilisées (2025)
+
+### Affichage et débogage
+echo|void|(string ...$expressions)|
+print|int|(string $expression)|
+print_r|void|(mixed $value [, bool $return = false])|
+var_dump|void|(mixed $value [, mixed ...$values])|
+var_export|void|(mixed $value [, bool $return = false])|
+die|void|([string $status])|
+exit|void|([string $status])|
+
+### Chaînes de caractères
+strlen|int|(string $string)|
+str_replace|mixed|(mixed $search, mixed $replace, mixed $subject [, int &$count])|
+strpos|int|false|(string $haystack, string $needle [, int $offset = 0])|
+substr|string|false|(string $string, int $offset [, int $length])|
+trim|string|(string $string [, string $characters = " \t\n\r\0\x0B"])|
+strtolower|string|(string $string)|
+strtoupper|string|(string $string)|
+ucfirst|string|(string $string)|
+ucwords|string|(string $string [, string $separators = " \t\r\n\f\v"])|
+str_contains|bool|(string $haystack, string $needle)|
+str_starts_with|bool|(string $haystack, string $needle)|
+str_ends_with|bool|(string $haystack, string $needle)|
+implode|string|(string $glue, array $pieces)|
+explode|array|(string $separator, string $string [, int $limit = PHP_INT_MAX])|
+htmlspecialchars|string|(string $string [, int $flags = ENT_QUOTES [, string $encoding = "UTF-8" [, bool $double_encode = true]]])|
+
+### Tableaux
+count|int|(Countable|array $value [, int $mode = COUNT_NORMAL])|
+array_map|array|(callable $callback, array $array1 [, array ...$arrays])|
+array_filter|array|(array $array [, callable $callback [, int $flag = 0]])|
+array_merge|array|(array $array1 [, array ...$arrays])|
+array_keys|array|(array $array [, mixed $search_value [, bool $strict = false]])|
+array_values|array|(array $array)|
+in_array|bool|(mixed $needle, array $haystack [, bool $strict = false])|
+array_search|mixed|(mixed $needle, array $haystack [, bool $strict = false])|
+array_slice|array|(array $array, int $offset [, int $length = null [, bool $preserve_keys = false]])|
+array_push|int|(array &$array, mixed ...$values)|
+array_pop|mixed|(array &$array)|
+array_unique|array|(array $array [, int $sort_flags = SORT_STRING])|
+array_column|array|(array $array, mixed $column_key [, mixed $index_key = null])|
+array_diff|array|(array $array1, array $array2 [, array ...$arrays])|
+array_intersect|array|(array $array1, array $array2 [, array ...$arrays])|
+
+### Fichiers et répertoires
+file_get_contents|string|false|(string $filename [, bool $use_include_path = false [, resource $context [, int $offset = 0 [, int $length = null]]])|
+file_put_contents|int|false|(string $filename, mixed $data [, int $flags = 0 [, resource $context]])|
+file_exists|bool|(string $filename)|
+is_file|bool|(string $filename)|
+is_dir|bool|(string $filename)|
+mkdir|bool|(string $directoryname [, int $permissions = 0777 [, bool $recursive = false [, resource $context]]])|
+unlink|bool|(string $filename [, resource $context])|
+copy|bool|(string $from, string $to [, resource $context])|
+rename|bool|(string $oldname, string $newname [, resource $context])|
+
+### Fonctions mathématiques
+rand|int|(int $min, int $max)|
+mt_rand|int|(int $min, int $max)|
+round|float|(float $num [, int $precision = 0 [, int $mode = PHP_ROUND_HALF_UP]])|
+ceil|float|(float $num)|
+floor|float|(float $num)|
+min|mixed|(mixed $value [, mixed ...$values])|
+max|mixed|(mixed $value [, mixed ...$values])|
+abs|number|(mixed $number)|
+sqrt|float|(float $num)|
+pow|number|(number $num, number $exponent)|
+
+### Dates et heures
+time|int|()|
+date|string|(string $format [, int $timestamp = time()])|
+strtotime|int|false|(string $datetime [, int $baseTimestamp = time()])|
+microtime|string|float|([bool $as_float = false])|
+
+### JSON
+json_encode|string|false|(mixed $value [, int $flags = 0 [, int $depth = 512]])|
+json_decode|mixed|(string $json [, bool $associative = false [, int $depth = 512 [, int $flags = 0]]])|
+
+### URL et encodage
+urlencode|string|(string $string)|
+urldecode|string|(string $string)|
+base64_encode|string|(string $data)|
+base64_decode|string|false|(string $data [, bool $strict = false])|
+htmlentities|string|(string $string [, int $flags = ENT_QUOTES [, string $encoding = "UTF-8" [, bool $double_encode = true]]])|
+
+### Variables et tests
+isset|bool|(mixed $var [, mixed ...$vars])|
+empty|bool|(mixed $var)|
+is_null|bool|(mixed $value)|
+is_int|bool|(mixed $value)|
+is_string|bool|(mixed $value)|
+is_array|bool|(mixed $value)|
+is_bool|bool|(mixed $value)|
+gettype|string|(mixed $value)|
