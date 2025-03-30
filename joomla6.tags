@@ -1,0 +1,73 @@
+# format=pipe
+# Joomla! 6 CMS - Tags for Geany (2025)
+
+### [CORE] ###
+Factory::getApplication|Joomla\CMS\Application\CMSApplication|()|
+Factory::getDocument|Joomla\CMS\Document\Document|()|
+Factory::getUser|Joomla\CMS\User\User|()|
+Factory::getSession|Joomla\CMS\Session\Session|()|
+Factory::getContainer|Psr\Container\ContainerInterface|()|
+Factory::getDbo|Joomla\Database\DatabaseInterface|()|
+Text::_|string|(string $key)|
+Text::sprintf|string|(string $key, mixed ...$args)|
+Route::_|string|(string $url [, bool $xhtml = true [, bool $absolute = false]])|
+Uri::root|string|()|
+Uri::current|string|()|
+HTMLHelper::_|mixed|(string $method, mixed ...$args)|
+
+### [DATABASE & MODELS] ###
+DatabaseDriver::setQuery|Joomla\Database\DatabaseQuery|(string $query [, int $offset = 0 [, int $limit = 0]])|
+DatabaseDriver::loadResult|mixed|()|
+DatabaseDriver::loadColumn|array|()|
+DatabaseDriver::loadAssoc|array|()|
+DatabaseDriver::loadObject|stdClass|()|
+DatabaseDriver::insertid|string|()|
+DatabaseQuery::select|DatabaseQuery|(mixed $columns)|
+DatabaseQuery::where|DatabaseQuery|(mixed $conditions [, string $glue = 'AND'])|
+ListModel::getItems|array|()|
+AdminModel::getForm|mixed|(array $data = [], bool $loadData = true)|
+
+### [MVC] ###
+BaseController::execute|mixed|(string $task)|
+BaseController::display|void|(bool $cachable = false, array $urlparams = [])|
+FormBehaviorTrait::loadFormData|array|()|
+TableView::display|void|(string $tpl = null)|
+
+### [EVENTS & PLUGINS] ###
+PluginHelper::importPlugin|void|(string $type [, string $folder = 'system'])|
+$dispatcher->dispatch|EventInterface|(string $eventName, EventInterface $event)|
+AbstractPlugin::__construct|void|(DispatcherInterface $dispatcher, array $config = [])|
+
+### [TEMPLATES] ###
+$this->template|string|()|
+$this->params|Joomla\Registry\Registry|()|
+$this->language|string|()|
+$this->direction|string|()|
+$this->getPreloadManager|Joomla\CMS\WebAsset\WebAssetManager|()|
+
+### [WEB ASSETS] ###
+WebAssetManager::registerAsset|void|(string $name, array $options)|
+WebAssetManager::useAsset|void|(string $name)|
+WebAssetRegistry::addRegistryFile|void|(string $path)|
+
+### [API & SERVICES] ###
+ApiApplication::execute|void|()|
+ContainerAwareTrait::getContainer|Psr\Container\ContainerInterface|()|
+MVCFactory::createModel|BaseDatabaseModel|(string $name, string $prefix = '', array $config = [])|
+
+### [SECURITY] ###
+InputFilter::clean|mixed|(mixed $source, string $type = 'string')|
+Input::get|mixed|(string $name [, mixed $default = null [, string $filter = 'cmd']])|
+Input::getString|string|(string $key, string $default = '')|
+Input::getInt|int|(string $key, int $default = 0)|
+
+### [UTILITIES] ###
+File::read|string|(string $path)|
+Folder::create|bool|(string $path [, int $mode = 0755])|
+Log::add|void|(string $message [, int $level = Log::INFO [, string $category = '']])|
+Mailer::sendMail|bool|(string $from, string $fromName, string $recipient, string $subject, string $body [, bool $mode = false [, string $cc = null [, string $bcc = null]]])|
+
+### [JOOMLA 6 NEW FEATURES] ###
+WebComponentRegistry::register|void|(string $name, array $options)|
+Workflow::transition|bool|(string $transition, int $pk)|
+Schema::getInstance|SchemaInterface|(string $name)|
